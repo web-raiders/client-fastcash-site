@@ -1,0 +1,53 @@
+---
+import Layout from '@components/layout.astro';
+import { ProductView } from '@assets/images';
+import { Common } from '@components/index';
+import { Data } from "@utils/index";
+import { PRODUCTS_PAGE_DESCRIPTION } from '@utils/constants'
+import { SlBadge } from "react-icons/sl";
+
+
+---
+
+<Layout title='Products' description={PRODUCTS_PAGE_DESCRIPTION}>
+    <!-- Hero Section -->
+    <Common.Hero backgroundImage={ProductView} header='Products' caption='Borrow with confidence, repay with ease.' />
+
+    <!-- Projects Section -->
+    <section class="w-full min-h-screen pt-10 md:pt-32">
+        <Common.Container>
+            <div class="flex pt-10 flex-col gap-y-10 md:flex-row md:pt-0">
+                <Common.Project qualifications={Data.qualifications} page='projects' />
+            </div>
+        </Common.Container>
+    </section>
+
+    <!-- Featured Section -->
+    <section class="w-full min-h-screen py-10 pb-32">
+        <Common.Container>
+            <div class="w-full flex flex-wrap gap-6 mt-24" data-aos='fade-up' data-aos-offset='10'>
+                {
+                    Data.products.map((item: any) => (
+                    <div class="relative overflow-hidden w-full md:w-[350px] lg:w-[310px] xl:w-[380px] h-[500px] bg-cover bg-no-repeat bg-center rounded-xl" style={{ backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.6)), url(${item.image})`}}>
+                        <div class="cursor-pointer flex-col px-8 mt-[120px] transition ease-in-out delay-150 duration-300 hover:-translate-y-24">
+                            <div class={`w-[max-content] backdrop-opacity-10 backdrop-invert bg-white/30 p-5 rounded-full`}>
+                                <SlBadge size={'30px'} color="#fff" />
+                            </div>
+                            <h6 class="text-white font-bold text-[18px] pt-5">{item.name}</h6>
+                            <article class="text-white font-semibold pt-3">
+                                <p class="text-base">{item.description}</p>
+                            </article>
+                        </div>
+                        <div class="absolute bottom-0 left-0 mb-10 ml-10">
+                            <Common.Button path={`https://docs.google.com/forms/d/e/1FAIpQLSe2nvsxuPIdObeks1S6Fa1Tr5IJWZ4n4hqrSWM6GYyDH13Gdg/viewform?usp=preview`} text="Apply" className="py-2 px-4 text-[16px] mt-6 text-white bg-green rounded-full baseline hover:bg-darkBlue" />
+                        </div>
+                    </div>
+                    ))
+                }
+            </div>
+        </Common.Container>
+    </section>
+
+    <!-- Live Green Section -->
+	<Common.Spread />
+</Layout>

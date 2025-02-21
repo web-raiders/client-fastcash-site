@@ -1,0 +1,43 @@
+---
+import { TiSocialFacebook, TiSocialTwitter } from "react-icons/ti";
+import { PiInstagramLogo } from "react-icons/pi";
+import { FaLinkedinIn } from "react-icons/fa";
+const iconList = [
+    {
+        icon: TiSocialFacebook,
+        path: 'https://www.facebook.com/'
+    },
+    {
+        icon: TiSocialTwitter,
+        path: 'https://x.com/FastcashFin'
+    },
+    {
+        icon: PiInstagramLogo,
+        path: 'https://www.instagram.com/fastcashglobal?igsh=bGZ3bDdnbmh2M242'
+    },
+    {
+        icon: FaLinkedinIn,
+        path: 'https://www.linkedin.com/in/fastcash-finance-7013a4352'
+    }
+]
+const { size = "16px", hover = false } = Astro.props
+interface Props {
+    size?: string;
+    hover?: boolean;
+}
+---
+
+
+
+<!-- Social Media Icons -->
+<div class="flex gap-1 justify-center items-center md:justify-start md:items-left">
+    {
+        iconList.map(item => (
+            <a href={item.path} target="_blank" rel="noreferrer">
+                <div class={`w-[max-content] bg-[#F56B1E] cursor-pointer p-2 rounded-full ${hover && 'hover:bg-darkBlue cursor-pointer'}`}>
+                    <item.icon color="#fff" size={size} />
+                </div>
+            </a>
+        ))
+    }
+</div>

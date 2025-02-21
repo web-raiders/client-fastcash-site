@@ -1,0 +1,11 @@
+---
+const { flex = "flex-row", justify = "justify-between" } = Astro.props;
+
+interface Props {
+  flex?: string;
+  justify?: string
+}
+---
+<div class=`w-[90%] mx-auto flex ${flex} ${justify} items-center md:w-[95%] xxl:w-4/5`>
+  <slot />
+</div>

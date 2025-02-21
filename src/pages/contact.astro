@@ -1,0 +1,102 @@
+---
+import { SocialIcons } from '@components/common';
+import { Common } from '@components/index';
+import Layout from '@components/layout.astro';
+import { Data } from '@utils/index';
+import { CONTACT_PAGE_DESCRIPTION } from '@utils/constants'
+---
+
+<Layout title='Contact Us' description={CONTACT_PAGE_DESCRIPTION}>
+    <!-- Hero Section -->
+    <Common.Hero backgroundImage={'/images/telephones.jpg'} header='Contact us' />
+
+    <!-- Feedback Section -->
+    <section class="w-full min-h-screen md:min-h-[50vh] py-10 lg:py-32">
+        <Common.Container>
+            <div class="flex flex-col md:flex-row gap-y-10 md:gap-x-10 lg:gap-x-20">
+                <div class="w-full md:w-[40%] flex-col" data-aos='fade-right' data-aos-offset='100'>
+                    <!-- Left Content -->
+                    <h6 class="uppercase text-base text-[#F56B1E] font-bold">Send us a message</h6>
+                    <h2 class="text-[26px] md:text-[32px] md:leading-[28px] lg:text-[40px] text-darkBlue font-bold mt-3 md:leading-[50px]">
+                        Have a question or feedback?
+                    </h2>
+                    <p class="text-gray-500 mt-5 pb-3">
+                        Let us know how we can help you. We are here to answer any questions you may have about our services. Reach out to us and we'll respond as soon as we can.
+                    </p>
+                    <p class="text-gray-500 pb-3">
+                        For general loan inquiries, partnership opportunities, or to say hello, please reach out to us at <a href="mailto:loans@fastcashng.com" class="text-[#F56B1E]">loans@fastcashng.com</a>
+                    </p>
+                    <p class="text-gray-500 pb-3">
+                        For customer support, general assistance, or any issues related to our products, contact us at <a href="mailto:customercare@fastcashng.com" class="text-[#F56B1E]">customercare@fastcashng.com</a>
+                    </p>
+                    <p class="text-gray-500 border-b border-gray-200 pb-5">
+                        For detailed information about our company, products, and loan services, feel free to reach out to <a href="mailto:info@fastcashng.com" class="text-[#F56B1E]">info@fastcashng.com</a>
+                    </p>
+                    <div class="flex flex-row md:flex-col lg:flex-row mt-5 gap-x-5 lg:gap-x-5">
+                        <h4 class="text-darkBlue text-[18px] md:text-[25px] font-semibold">Follow Us :</h4>
+                        <div class="h-[24px] cursor-pointer">
+                            <SocialIcons size='24px' />
+                        </div>
+                    </div>
+                </div>
+                <div class="w-full md:w-[60%] lg:w-[50%] shadow-2xl rounded-2xl" data-aos='fade-up' data-aos-offset='100'>
+                    <div class="w-full px-5 lg:px-0">
+                        <Common.Form client:load  />
+                    </div>
+                </div>
+            </div>
+        </Common.Container>
+    </section>
+
+    <!-- Map -->
+    <section class="w-full min-h-screen md:min-h-[50vh]">
+            <div class="flex flex-col md:flex-row h-[100%]">
+                <!-- Map Component -->
+                <div class="w-full md:w-[45%] lg:w-2/4 h-[500px] md:h-[auto]">
+                    <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3963.291121591354!2d3.350342075777644!3d6.610703593383284!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103b936256a75c31%3A0xeefb2ea067f0a4d5!2sIKEJA%20TOWN%20SQUARE!5e0!3m2!1sen!2sng!4v1740114781543!5m2!1sen!2sng" 
+                    width="100%" 
+                    height="100%" 
+                    style="border:0;" 
+                    allowfullscreen="true" 
+                    loading="lazy" 
+                    referrerpolicy="no-referrer-when-downgrade"
+                    ></iframe>
+                </div>
+                <div class="w-full md:w-[55%] md:px-5 lg:w-2/4 h-full bg-red-900 pb-5 lg:pb-20">
+                    <Common.Container>
+                        <div class="flex-col pt-10 md:pt-20" data-aos='fade-up' data-aos-offset='100'>
+                            <h6 class="uppercase text-base text-[#F56B1E] font-bold">Get in touch</h6>
+                            <h2 class="text-[26px] leading-[32px] md:text-[32px] lg:text-[40px] text-white font-bold mt-3 lg:leading-[50px]">
+                                Seamless Communication, Global Impact.
+                            </h2>
+                            <p class="text-gray-200 mt-5 border-b border-white pb-10">
+                                Our team is always ready to help you with any questions or concerns you may have. Feel free to reach out to us.
+                            </p>
+                            <div class="mt-10 flex-col">
+                                {
+                                    Data.contactList.map(item => (
+                                        <div class="flex gap-x-5 mb-5">
+                                            <div class="h-full">
+                                                <div class={`w-[max-content] p-3 mx-auto bg-[#F5E9E1] rounded-full`}>
+                                                    <item.icon size={'35px'} color="#F56B1E" />
+                                                    </div>
+                                            </div>
+                                            <div class="w-full md:w-3/4 flex-col md:flex-wrap ml-0">
+                                                <h3 class="text-[18px] font-bold text-white">{item.title}</h3>
+                                                <div class="flex-col">
+                                                    <p class="text-base text-white mt-1 md:pr-20">
+                                                        {item.headingOne}
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    ))
+                                }
+                            </div>
+                        </div>
+                    </Common.Container>
+                </div>
+            </div>
+    </section>
+</Layout>

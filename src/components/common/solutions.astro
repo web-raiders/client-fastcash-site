@@ -1,0 +1,28 @@
+---
+import { Data } from "@utils/index";
+import Container from "./container.astro";
+---
+
+<section class="w-full min-h-[4/5] bg-gray-100 pt-5 pb-14 lg:py-32">
+    <Container>
+        <div class="w-full flex flex-col lg:flex-row gap-x-10" data-aos='fade-right' data-aos-offset='100'>
+            <div class="w-[100%] md:w-[80%] md:mx-auto lg:w-[35%] lg:mx-0 flex-wrap pt-10">
+                <h6 class="uppercase text-center lg:text-left text-[#F56B1E] font-bold">Why choose us</h6>
+                <h2 class="text-[24px] leading-[28px] md:text-[32px] md:leading-[32px] text-center lg:text-left lg:text-[38px] text-red-900 font-bold mt-4 lg:leading-[45px]">Say Hello to Low Interest, High Possibilities.</h2>
+            </div>
+            <div class="w-[100%] lg:w-[65%] mt-10 lg:mt-0 flex flex-col md:flex-row md:justify-center md:items-center gap-5 md:gap-x-4">
+                {
+                    Data.solutions.map(item => (
+                    <div class="bg-white rounded-xl py-10 px-5 border border-solid border-gray-200 text-center cursor-auto shadow-xl">
+                        <div class={`_top_icon w-[max-content] p-3 mx-auto bg-[#F5E9E1] rounded-xl`}>
+                            <item.icon size={'35px'} color="#7F1C1D" />
+                        </div>
+                        <h6 class="text-red-900 text-[18px] font-semibold pt-5">{item.title}</h6>
+                        <p class="pt-5 text-gray-600">{item.description}</p>
+                    </div>
+                    ))
+                }
+            </div>
+        </div>
+    </Container>
+</section>
