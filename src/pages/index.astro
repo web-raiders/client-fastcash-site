@@ -1,0 +1,77 @@
+---
+import { Layout, Helpers, Common } from "@components/index"
+import { Data } from "@utils/index";
+import "@styles/styles.css";
+
+---
+
+<Layout>
+	<!-- Carousel -->
+	<Helpers.Carousel client:load />
+
+	<!-- About Us Section -->
+	<section class="w-full xs:pt-[100px] sm:pt-[100px] xsm:pt-[100px] smm:pt-[100px] pb-10 md:pt-[150px]">
+		<Common.Container>
+			<div class="w-full flex gap-y-10 flex-col gap-x-10 md:flex md:flex-row md:gap-y-0">
+				<!-- Left Content -->
+				<div class="w-full flex-col flex-wrap md:w-2/4 md:mt-[50px]" data-aos='fade-right' data-aos-offset='100' data-aos-duration="500">
+					<h6 class="text-[15px] font-bold text-[#F56B1E] uppercase md:text-base">Who we are</h6>
+					<h2 class="text-[28px] leading-[26px] md:text-[40px] md:leading-[45px] mt-5 text-red-900 font-bold">Empowering Financial Freedom</h2>
+					<p class="text-[14px] text-base mt-5 md:text-base md:pr-20">
+						At Fastcash, we believe that everyone deserves access to financial services that meet their needs. That's why we've created a range of loan products designed to cater to the unique requirements of our clients. 
+					</p>
+					<p class="text-[14px] text-base mt-5 md:text-base md:pr-20">
+						Our team of experienced professionals is committed to providing exceptional customer service and ensuring that our clients receive the support they need every step of the way. 
+						We go the extra mile to understand our clients' financial situations and provide tailored solutions that help them achieve their goals.
+					</p>
+					<!-- <div class="mt-10">
+						<Common.Button path="#" className="py-3 px-10 font-semibold text-white bg-green rounded-full baseline hover:bg-darkBlue" text="Discover more" />
+					</div> -->
+				</div>
+				<!-- Right Image -->
+				<div class="w-full h-full mt-[10px] md:w-2/4 md:mt-[50px]" data-aos='fade-up' data-aos-offset='100' data-aos-duration="500">
+					<div class="relative">
+						<img src='/images/wallet.jpg' alt={"energy image"} class={"w-full h-full rounded-xl"} />
+					</div>
+					{/* Card */}
+					<div class="absolute -mt-[100px] -mb-[10px] w-[300px] h-[auto] py-10 px-7 bg-red-900 rounded-xl md:-mt-[220px] md:-ml-[30px]" data-aos='zoom-in' data-aos-offset='100' data-aos-delay='100'>
+						<h6 class="text-[#F56B1E] text-[15px] font-semibold md:text-[18px]">A Roadmap to Financial Freedom.</h6>
+						<p class="text-white text-[12px] pt-3 md:text-[14px]">We eliminate the barriers to financial access, providing a seamless loan process that ensures you get the support you need, without the wait.</p>
+						<div class="mt-7">
+							<Common.Button path=" /about" className="py-2 px-5 text-white bg-[#F56B1E] rounded-full baseline hover:text-[#F56B1E] hover:bg-[#F5E9E1]" text="Learn more" />
+						</div>
+					</div>
+				</div>
+			</div>
+		</Common.Container>
+	</section>
+
+	<!-- Our clients section -->
+	<!-- <Common.Clients /> -->
+
+	<!-- Live Green Section -->
+	<Common.Counter />
+	
+
+	<!-- Our projects section -->
+	<section class="w-full min-h-screen pt-10 md:pt-20 md:pb-20">
+		<Common.Container>
+			<div class="w-full flex flex-col md:flex-row">
+				<Common.Project qualifications={Data.qualifications} />
+			</div>
+		</Common.Container>
+	</section>
+
+	<!-- What we offer section -->
+	<Common.Offer page="landing" />
+
+	<!-- Keep your environment green section -->
+	<Common.Spread />
+
+	<!-- Why choose us -->
+	<Common.Solutions />
+	
+	<!-- Live Green Section -->
+	<Common.SecondSpread />
+	
+</Layout>

@@ -1,0 +1,20 @@
+---
+import { PortableText } from "astro-portabletext"
+import { GrServices } from "react-icons/gr";
+const { item } = Astro.props;
+
+interface Props {
+    item: any
+}
+---
+
+<div class="rounded-xl md:w-[350px] lg:w-[auto] py-10 px-5 border border-solid border-gray-200 text-center cursor-auto hover:shadow-xl">
+    {/* Top Icon */}
+    <div class={`w-[max-content] p-3 mx-auto bg-[#0fcc7c] rounded-xl`}>
+        <GrServices size={'35px'} color="#fff" />
+    </div>
+    <h6 class="text-deepBlue text-[24px] md:text-[18px] font-bold pt-5">{item.title}</h6>
+    <article class="pt-5 text-[18px] md:text-base">
+        <PortableText value={item.description} />
+    </article>
+</div>

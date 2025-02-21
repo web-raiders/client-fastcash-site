@@ -1,0 +1,41 @@
+:root {
+    --deepBlue: #243973;
+    --darkBlue: #12263A;
+    --green: #43b549;
+    --lightGrey: #e5e5e5;
+}
+
+._solutions_card:nth-child(2) {
+    background-color: #00d084;
+}
+
+._solutions_card:nth-child(2) > div  {
+    background-color: var(--white);
+}
+
+.project_sliders {
+    display: flex;
+    gap: 10px;
+}
+
+.swiper-button-prev {
+    background-image: url('../assets/images/prev_icon.png')!important;
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    background-position: center;
+}
+    
+.swiper-button-next {
+    background-image: url('../assets/images/next_icon.png')!important;
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    background-position: center;
+}
+    
+.swiper-button-next::after {
+    display: none;
+}
+    
+.swiper-button-prev::after {
+    display: none;
+}

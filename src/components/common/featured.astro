@@ -1,0 +1,24 @@
+---
+import { PortableText } from "astro-portabletext";
+import Button from "./button";
+import { SlBadge } from "react-icons/sl";
+const { project } = Astro.props;
+
+interface Props {
+    project: any
+}
+---
+<div class="overflow-hidden w-full md:w-[350px] lg:w-[310px] xl:w-[380px] h-[500px] bg-cover bg-no-repeat bg-center rounded-xl" style={{ backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.6)), url(${project?.image})`}}>
+    <div class="cursor-pointer flex-col px-8 mt-72 transition ease-in-out delay-150 duration-300 hover:-translate-y-24">
+        <div class={`w-[max-content] backdrop-opacity-10 backdrop-invert bg-white/30 p-5 rounded-full`}>
+            <SlBadge size={'30px'} color="#fff" />
+        </div>
+        <h6 class="text-white font-bold text-[18px] pt-5">{project?.name}</h6>
+        <article class="text-white font-semibold pt-3 line-clamp-3">
+            <PortableText value={project?.description} />
+        </article>
+        <div class="mt-14">
+            <Button path={`/projects/${project?.slug}`} text="Learn More" className="py-2 px-4 text-[16px] mt-6 text-white bg-green rounded-full baseline hover:bg-darkBlue" />
+        </div>
+    </div>
+</div>

@@ -1,0 +1,63 @@
+---
+import { Navbar, Footer, FooterBanner } from './navigation'
+const { title = 'Fastcash Global' } = Astro.props
+import { LANDING_PAGE_DESCRIPTION } from '@utils/constants'
+import { Cookies } from './common'
+interface Props {
+  title?: string;
+  description?: string;
+}
+import 'aos/dist/aos.css';
+
+import type { CollectionEntry } from "astro:content";
+import { sanityClient } from "sanity:client";
+
+
+---
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Google tag (gtag.js) -->
+    <!-- <script type="text/partytown" async src="https://www.googletagmanager.com/gtag/js?id=G-LVK7YBS73R"></script>
+    <script type="text/partytown">
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-LVK7YBS73R');
+    </script> -->
+    <meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.png" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="description" content={LANDING_PAGE_DESCRIPTION} />
+    <title>{title}</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        /* overflow-x: hidden!important; */
+        margin: 0;
+        padding: 0;
+        scroll-behavior: smooth;
+      }
+    </style>
+  </head>
+  <body>
+      <Navbar client:load />
+      <main>
+          <slot />
+      </main>
+      <Footer />
+      <FooterBanner />
+      <Cookies client:only="react" />
+      <script>
+        import AOS from 'aos';
+        AOS.init({
+          once: true,
+          offset: 100,
+          easing: 'ease-in-out',
+          delay: 50,
+          duration: 1000
+        });
+      </script>
+  </body>
+</html>

@@ -1,0 +1,79 @@
+---
+import { Layout, Common } from "@components/index"
+import { Data } from "@utils/index";
+import { ABOUT_PAGE_DESCRIPTION } from '@utils/constants'
+---
+
+<Layout title='About Us' description={ABOUT_PAGE_DESCRIPTION}>
+    <!-- Hero Section -->
+	<Common.Hero backgroundImage={'/images/team-in-meeting.jpg'} header='About Us' caption='Trusted by thousands, built for you.' />
+    <!-- About Section -->
+    <section class="w-full pt-20 lg:pt-40 pb-[40px]">
+		<Common.Container>
+			<div class="flex flex-col md:flex-row md:gap-5">
+				<!-- Left Content -->
+				<div class="w-full md:w-[55%] lg:w-2/4 flex-col flex-wrap" data-aos='fade-right' data-aos-offset='100' data-aos-duration="500">
+					<h6 class="text-[14px] md:text-base font-bold text-[#F56B1E] uppercase">Our Commitment</h6>
+					<h2 class="text-[28px] leading-[26px] md:text-[40px] md:leading-[45px] mt-5 text-red-900 font-bold">Your partner in financial growth.</h2>
+					<p class="text-[14px] text-base mt-5 md:text-base md:pr-20">
+						Fastcash Global Ltd is a financial solutions provider offering various investment and loan products to meet the needs of clients in the formal and informal sectors.
+						We support businesses and individuals with bespoke financial solutions while delivering impressive returns to our stakeholders.
+						Our products are designed to drive financial inclusion with focus on the unserved and underserved markets. 
+					</p>
+					<p class="text-[14px] text-base mt-5 md:text-base md:pr-20">
+						Our aim is to become a major player in the financial services industry and contribute our quota to the growth of the Nigerian and African economy.
+					</p>
+					<h4 class="text-red-900 font-bold mt-5">Vison</h4>
+					<p class="text-[14px] text-base md:text-base md:pr-20">To be the leading provider of innovative financial solutions that empower individuals and businesses to succeed. We strive to create a world where everyone has access to the financial tools and resources they need to thrive.</p>
+					<h4 class="text-red-900 font-bold mt-5">Mission</h4>
+					<p class="text-[14px] text-base md:text-base md:pr-20">To drive financial inclusion and provide access to credit for underserved markets. We aim to deliver fast, convenient, and affordable loans that help our clients achieve their goals and improve their financial well-being.</p>
+					<!-- <div class="mt-10">
+						<Common.Button path="#" className="py-3 px-10 font-semibold text-white bg-green rounded-full baseline hover:bg-darkBlue" text="Discover more" />
+					</div> -->
+				</div>
+				<!-- Right Image -->
+				<div class="w-full md:w-[40%] lg:w-2/4 h-full mt-[50px] md:mt-[100px]" data-aos='fade-up' data-aos-offset='100' data-aos-duration="500">
+					<div class="relative">
+						<img src='/images/team-hands.jpg' alt={"hands image"} class={"w-full h-full rounded-xl"} />
+					</div>
+				</div>
+			</div>
+		</Common.Container>
+	</section>
+
+	<section class=`w-full bg-[#fff9f5] md:min-h-[60vh] lg:min-h-screen py-10 lg:pt-28 lg:pb-20 mt-40'}`>
+    <Common.Container flex="flex-col">
+        <div class="w-[100%] lg:w-3/5 flex-col justify-center items-center mx-auto text-center" data-aos='fade-up' data-aos-offset='100'>
+            <h6 class="text-[12px] md:text-base uppercase text-[#F56B1E] font-bold">Core Values</h6>
+            <h2 class="text-[24px] leading-[32px] md:text-[30px] lg:text-[48px] text-red-900 font-bold mt-3 lg:leading-[50px]">What Sets Us Apart</h2>
+        </div>
+        <!-- Services Cards -->
+        <div class="grid grid-cols-1 mt-10 md:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-5 xl:gap-10 md:mt-10 lg:mt-20" data-aos='fade-down' data-aos-offset='100'>
+            {
+                Data.coreValues.map((item: any) => (
+                    <div class="bg-white cursor-pointer w-full xl:w-[390px] h-auto py-10 shadow-xl rounded-3xl hover:shadow-2xl">
+                        <Common.Container flex="flex-col">
+                            <div class="w-[60px] h-[60px] rounded-xl bg-[#F5E9E1] flex justify-center items-center">
+                                <item.icon color="#7F1C1D" size={'32px'}/>
+                            </div>
+                            <h3 class="text-[18px] font-bold mt-5 text-red-900 mb-3">{item.title}</h3>
+                            <article class="text-gray-500">
+                                <p class="text-base">{item.description}</p>
+                            </article>
+                        </Common.Container>
+                    </div>
+                ))
+            }
+        </div>
+    </Common.Container>
+</section>
+
+    <!-- Live Green Section -->
+	<Common.Counter />
+
+    <!-- Decision Section -->
+	<!-- <Common.Services /> -->
+    
+
+
+</Layout>

@@ -1,0 +1,160 @@
+---
+import { Container } from "../common";
+import { Logo } from "@assets/images";
+import { Data } from "@utils/index";
+import { SocialIcons } from "../common";
+import { LiaLongArrowAltRightSolid } from "react-icons/lia";
+import { FiPhone } from "react-icons/fi";
+import { MdOutlineEmail, MdOutlineLocationOn } from "react-icons/md";
+
+const footerCompany = [
+    {
+        link: 'Company',
+        path: '/'
+    },
+    {
+        link: 'About Us',
+        path: '/about'
+    },
+    {
+        link: 'Products',
+        path: '/products'
+    },
+    {
+        link: 'Apply',
+        path: 'https://docs.google.com/forms/d/e/1FAIpQLSe2nvsxuPIdObeks1S6Fa1Tr5IJWZ4n4hqrSWM6GYyDH13Gdg/viewform?usp=preview'
+    },
+]
+---
+
+<footer class="w-full h-[auto] lg:min-h-[300px] bg-[#f5e8e1]">
+    <Container flex="md:flex-col">
+        <!-- Grid Columns -->
+        <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-4 gap-x-10 my-[30px] md:mt-[50px]">
+            <!-- Column 1 -->
+            <div class="col-span-4 mx-14 md:mx-0 md:col-span-2 lg:col-span-1">
+                <img src={Logo} alt={"logo"} width={"200"} height={"200"} />
+                <div class="mt-5">
+                    <SocialIcons size={'20px'} />
+                </div>
+            </div>
+
+            <!-- Column 2 -->
+            <div class="col-span-2 mt-5 md:col-span-1 md:mt-0">
+                <h4 class="text-[24px] font-semibold text-darkBlue">Company</h4>
+                <ul class="mt-5 cursor-pointer">
+                    {
+                        footerCompany.map((item: any) => {
+                            return (
+                                <div class="flex gap-2 mb-3">
+                                    <div class="w-[20px] h-[20px] bg-[#F56B1E] flex justify-center items-center rounded-full">
+                                        <LiaLongArrowAltRightSolid color={"#fff"} size={"18px"} />
+                                    </div>
+                                    <a href={item.path} class="font-semibold text-darkBlue">{item.link}</a>
+                                </div>
+                            )
+                        }
+                        )
+                    }
+                </ul>
+            </div>
+
+            <!-- Column 3 -->
+            <div class="col-span-2 mt-5 md:col-span-1 md:mt-0">
+                <h4 class="text-[24px] font-semibold text-darkBlue">Support</h4>
+                <ul class="mt-5 cursor-pointer">
+                    {
+                        Data.footer_support.map(item => (
+                            <div class="flex gap-2 mb-3">
+                                <div class="w-[20px] h-[20px] bg-[#F56B1E] flex justify-center items-center rounded-full">
+                                    <LiaLongArrowAltRightSolid color={"#fff"} size={"18px"} />
+                                </div>
+                                <a href={item.path} class="font-semibold text-darkBlue">{item.link}</a>
+                            </div>
+                        ))
+                    }
+                </ul>
+            </div>
+
+            <!-- Column 4 -->
+            <div class="mt-5 md:mt-1 col-span-4 md:hidden lg:block lg:col-span-1">
+                <h4 class="text-[24px] font-semibold text-darkBlue">Get in touch</h4>
+                <div class="flex-col mt-2">
+                    <!-- Circle -->
+                    <div class="flex gap-x-3 mt-5">
+                        <div class="w-[50px] h-[50px] p-4 bg-[#F56B1E] flex justify-center items-center rounded-full">
+                            <MdOutlineLocationOn color={"#fff"} size={"25px"} />
+                        </div>
+                        <div class="flex-col">
+                            <p class="text-[16px] font-semibold text-gray-700">Address</p>
+                            <h6 class="text-[16px] md:text-[24px] lg:text-[14px] xl:text-[16px] font-semibold text-darkBlue">Ikeja Town Square. 131, Obafemi Awolowo way, Alausa ikeja Lagos State</h6>
+                        </div>
+                    </div>
+                    <div class="flex gap-x-3 mt-5">
+                        <div class="w-[50px] h-[50px] p-4 bg-[#F56B1E] flex justify-center items-center rounded-full">
+                            <MdOutlineEmail color={"#fff"} size={"25px"} />
+                        </div>
+                        <div class="flex-col text-pretty">
+                            <p class="text-[16px] font-semibold text-gray-700">Email</p>
+                            <h6 class="text-[16px] md:text-[24px] lg:text-[14px] xl:text-[16px] font-semibold text-darkBlue"><a href="mailto:loans@fastcashng.com">loans@fastcashng.com</a></h6>
+                        </div>
+                    </div>
+
+                    <!-- Circle -->
+                    <div class="flex gap-x-3 mt-5">
+                        <div class="w-[50px] h-[50px] p-4 bg-[#F56B1E] flex justify-center items-center rounded-full">
+                            <FiPhone color={"#fff"} size={"25px"} />
+                        </div>
+                        <div class="flex-col">
+                            <p class="text-[16px] font-semibold text-gray-700">Telephone</p>
+                            <h6 class="text-[16px] md:text-[18px] font-semibold text-darkBlue">+234 902 854 0441</h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="hidden md:block lg:hidden w-full mt-2 mb-20">
+            <h4 class="text-[24px] font-semibold text-darkBlue">Get in touch</h4>
+            <div class="grid grid-cols-4 gap-x-5">
+                <!-- <div class="flex-col mt-2"> -->
+                <!-- Column 4 -->
+                <div class="col-span-2">
+                        <!-- Circle -->
+                    <div class="flex gap-x-3 mt-5">
+                        <div class="w-[50px] h-[50px] p-4 bg-[#F56B1E] flex justify-center items-center rounded-full">
+                            <MdOutlineLocationOn color={"#fff"} size={"30px"} />
+                        </div>
+                        <div class="flex-col">
+                            <p class="text-[18px] font-semibold text-gray-700">Address</p>
+                            <h6 class="text-[20px] md:text-[24px] font-semibold text-darkBlue">Ikeja Town Square. 131, Obafemi Awolowo way, Alausa ikeja Lagos SState</h6>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-span-2">
+                        <!-- Circle -->
+                    <div class="flex gap-x-3 mt-5">
+                        <div class="w-[50px] h-[50px] p-4 bg-[#F56B1E] flex justify-center items-center rounded-full">
+                            <MdOutlineEmail color={"#fff"} size={"30px"} />
+                        </div>
+                        <div class="flex-col">
+                            <p class="text-[18px] font-semibold text-gray-700">Email</p>
+                            <h6 class="text-[20px] md:text-[24px] font-semibold text-darkBlue"><a href="mailto:loans@fastcashng.com">loans@fastcashng.com</a></h6>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-span-2">
+                        <!-- Circle -->
+                    <div class="flex gap-x-3 mt-5">
+                        <div class="w-[50px] h-[50px] p-4 bg-[#F56B1E] flex justify-center items-center rounded-full">
+                            <FiPhone color={"#fff"} size={"30px"} />
+                        </div>
+                        <div class="flex-col">
+                            <p class="text-[18px] font-semibold text-gray-700">24/7 Emergency Service</p>
+                            <h6 class="text-[20px] md:text-[24px] font-semibold text-darkBlue">09062892870</h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </Container>
+</footer>

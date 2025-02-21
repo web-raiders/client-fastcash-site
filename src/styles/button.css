@@ -1,0 +1,7 @@
+._disabled {
+    background-color: #ccc;
+    color: #1e293b;
+}
+._disabled:hover {
+    pointer-events: none;
+}
