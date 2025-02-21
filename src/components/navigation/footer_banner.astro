@@ -1,7 +1,5 @@
 ---
 import { Container } from "../common";
-// import { Data } from "@utils/index";
-import { RiArrowRightSLine } from "react-icons/ri";
 const year = new Date().getFullYear()
 ---
 
@@ -12,18 +10,6 @@ const year = new Date().getFullYear()
             <div class="mb-5 lg:mb-0">
                 <p class="text-white text-center md:text-left text-[14px]">Copyright © {year} Fastcash Global NG. All rights reserved</p>
             </div>
-            <!-- <ul class="flex md:mt-0 md:mb-3 lg:mb-0 gap-x-5">
-                {
-                    Data.footer_banner_items.map(item => (
-                        <div class="flex gap-x-1">
-                            <div class="w-[20px] h-[20px] bg-[#0FCC7C] flex justify-center items-center rounded-full">
-                                <RiArrowRightSLine size={"12px"}  className="text-cyan-900" />
-                            </div>
-                            <li class="text-white text-[14px]"><a href={item.path}>{item.link}</a></li>
-                        </div>
-                    ))
-                }
-            </ul> -->
         </div>
     </Container>
 </footer>

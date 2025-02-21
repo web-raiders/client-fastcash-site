@@ -5,16 +5,12 @@ import {
     ProductFour,
     ProductFive
 } from "@assets/images"
-import { LiaToolsSolid } from "react-icons/lia";
 import { IoSettingsOutline } from "react-icons/io5";
 import { IoDiamondOutline } from "react-icons/io5";
 import { PiCarBatteryLight } from "react-icons/pi";
 import { GiBamboo } from "react-icons/gi";
 import { MdOutlineEnergySavingsLeaf } from "react-icons/md";
-import { PiFolders } from "react-icons/pi";
-import { PiBaseballHelmet } from "react-icons/pi";
 import { SlBadge } from "react-icons/sl";
-import { SlSupport } from "react-icons/sl";
 import { MdOutlineEmail } from "react-icons/md";
 import { FiPhone } from "react-icons/fi";
 import { SlLocationPin } from "react-icons/sl";

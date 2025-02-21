@@ -1,11 +1,5 @@
 ---
-import Button from "./button";
-import { Counter } from "../helpers"
-
-const { page = 'landing' } = Astro.props;
-interface Props {
-    page?: string
-}
+import { CounterHelper } from "../helpers"
 ---
 
 
@@ -19,19 +13,19 @@ interface Props {
     <div class="w-full h-[300px] md:h-[150px] bg-red-900 mt-[100px] lg:mt-[250px] flex justify-center items-center">
         <div class="w-[90%] -mt-[120px] md:w-4/5 h-[100px] grid grid-cols-2 md:grid-cols-4 md:-mt-0">
             <div class="flex flex-col justify-center items-center border-r-2 border-b-2 border-b-gray-500 border-r-gray-500 pb-5 md:pb-0 md:border-b-0">
-                <span class="text-[#F56B1E] text-[24px] font-bold"><Counter client:load from={0} to={5000} />+</span>
+                <span class="text-[#F56B1E] text-[24px] font-bold"><CounterHelper client:load from={0} to={5000} />+</span>
                 <p class="text-white text-[14px] lg:text-[18px] font-semibold">Happy Customers</p>
             </div>
             <div class="flex flex-col justify-center items-center md:border-r-2 border-b-2 border-b-gray-500 md:border-r-gray-500 pb-5 md:pb-0 md:border-b-0">
-                <span class="text-[#F56B1E] text-center text-[24px] font-bold"><Counter client:load from={0} to={500} />m+</span>
+                <span class="text-[#F56B1E] text-center text-[24px] font-bold"><CounterHelper client:load from={0} to={500} />m+</span>
                 <p class="text-white text-[14px] lg:text-[18px] font-semibold">Loan Volume</p>
             </div>
             <div class="flex flex-col justify-center items-center border-r-2 border-r-gray-500">
-                <span class="text-[#F56B1E] text-[24px] font-bold"><Counter client:load from={0} to={98} />%</span>
+                <span class="text-[#F56B1E] text-[24px] font-bold"><CounterHelper client:load from={0} to={98} />%</span>
                 <p class="text-white text-[14px] lg:text-[18px] mt-3 font-semibold">Customer Satisfaction</p>
             </div>
             <div class="flex flex-col justify-center items-center">
-                <span class="text-[#F56B1E] text-[24px] font-bold"><Counter client:load from={0} to={3} />Hours</span>
+                <span class="text-[#F56B1E] text-[24px] font-bold"><CounterHelper client:load from={0} to={3} />Hours</span>
                 <p class="text-white text-[14px] lg:text-[18px] font-semibold text-center xxl:text-left">Disbursement Time</p>
             </div>
         </div>

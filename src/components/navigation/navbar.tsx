@@ -1,10 +1,8 @@
-import React, { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 import { IoMdClose } from 'react-icons/io';
 import { RxHamburgerMenu } from 'react-icons/rx';
-import { MdKeyboardArrowDown } from 'react-icons/md';
 import '@styles/navbar.css'
 import { motion } from 'framer-motion';
-import { Data } from '@utils/index';
 import { Logo } from "@assets/images";
 
 
