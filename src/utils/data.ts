@@ -7,8 +7,8 @@ import {
 } from "@assets/images"
 import { IoSettingsOutline } from "react-icons/io5";
 import { IoDiamondOutline } from "react-icons/io5";
-import { PiCarBatteryLight } from "react-icons/pi";
-import { GiBamboo } from "react-icons/gi";
+// import { PiCarBatteryLight } from "react-icons/pi";
+import { GiBamboo, GiDualityMask, GiMoneyStack } from "react-icons/gi";
 import { MdOutlineEnergySavingsLeaf } from "react-icons/md";
 import { SlBadge } from "react-icons/sl";
 import { MdOutlineEmail } from "react-icons/md";
@@ -97,7 +97,7 @@ export const solutions = [
         description: 'Our dedicated loan advisors are here to guide you at every step.'
     },
     {
-        icon: GiBamboo,
+        icon: GiDualityMask,
         title: 'Flexibility',
         description: 'Select a repayment plan that aligns with your income and budget.'
     },
@@ -141,33 +141,33 @@ export const productsLanding = [
     {
         title: 'Payday Loan',
         description: 'Our personal loans help individuals cover unexpected expenses and bridge financial gaps between paychecks. We offer deduction-based loans for civil servants at federal and state levels, with repayments taken directly from the source and no guarantor required. Private sector employees with a regular salary can also access flexible loan options tailored to their needs.',
-        icon: PiCarBatteryLight,
+        icon: GiMoneyStack,
 
     },
     {
         title: 'School Loan',
         description: 'Our school loan is a tailor-made product designed to help schools meet expenses such as salaries, repairs, renovation, purchase of assets and administrative expenses etc. Our loan procedure is seamless and disbursement is within 3 hours after meeting requirements.',
-        icon: PiCarBatteryLight,
+        icon: GiMoneyStack,
     },
     {
         title: 'Trader Loans',
         description: 'Our Traders Solution is designed to help small and medium-sized businesses access the funding they need to grow their businesses. With flexible repayment terms and competitive interest rates, our traders loan is the perfect choice for entrepreneurs looking to take their businesses to the next level.',
-        icon: PiCarBatteryLight,
+        icon: GiMoneyStack,
     },
     {
         title: 'Contract Finance Facility',
         description: 'This facility is designed to help contractors secure the funds they need to execute contracts and projects. We provide up to N50m facility to individual/companies with verifiable contracts from reputable organizations.',
-        icon: PiCarBatteryLight
+        icon: GiMoneyStack
     },
     {
         title: 'Investment opportunities',
         description: 'We help our clients create wealth through our array of investment products tailored to meet their financial goals. Transform your savings into wealth with our innovative investment solutions. If you are looking to create passive income, Fastcash is your right investment partner.',
-        icon: PiCarBatteryLight,
+        icon: GiMoneyStack,
     },
     {
         title: 'Financial Consulting',
         description: 'Our financial consulting services are designed to help you navigate the complexities of personal finance, business finance, and wealth management. Our team of seasoned experts will work closely with you to understand your unique financial goals, challenges, and aspirations. We’ll provide personalized guidance on budgeting, saving, investing, and managing debt, ensuring you make informed decisions that drive financial stability, growth, and success',
-        icon: PiCarBatteryLight,
+        icon: GiMoneyStack,
     },
 ]
 
@@ -176,30 +176,30 @@ export const products = [
         image: ProductOne,
         name: 'Personal loan',
         description: 'Our personal loans provide financial support for public and private sector employees, with deduction-based repayments for civil servants and flexible terms for salaried workers.',
-        icon: SlBadge,
+        icon: GiMoneyStack,
     },
     {
         image: ProductTwo,
         name: 'School loan',
         description: 'Our school loan is designed to help schools cover salaries, renovations, asset purchases, and administrative expenses. With a seamless process, funds are disbursed within 3 hours once requirements are met.',
-        icon: SlBadge,
+        icon: GiMoneyStack,
     },
     {
         image: ProductThree,
         name: 'Traders loan',
         description: 'Our Traders Solution provides SMEs with the funding they need to grow, offering flexible repayment terms and competitive interest rates to support business expansion.',
-        icon: SlBadge,
+        icon: GiMoneyStack,
     },
     {
         image: ProductFour,
         name: 'Contract Finance Facility',
         description: 'Our contractor loan provides up to ₦50M to individuals and companies with verifiable contracts, ensuring they have the funds needed to execute projects successfully.',
-        icon: SlBadge,
+        icon: GiMoneyStack,
     },
     {
         image: ProductFive,
         name: 'Investment Opportunities',
         description: 'We offer tailored investment solutions to help clients grow their wealth and achieve financial goals. Turn your savings into passive income with Fastcash.',
-        icon: SlBadge,
+        icon: GiMoneyStack,
     },
 ]

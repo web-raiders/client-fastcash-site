@@ -4,7 +4,6 @@ import { ProductView } from '@assets/images';
 import { Common } from '@components/index';
 import { Data } from "@utils/index";
 import { PRODUCTS_PAGE_DESCRIPTION } from '@utils/constants'
-import { SlBadge } from "react-icons/sl";
 
 
 ---
@@ -31,7 +30,7 @@ import { SlBadge } from "react-icons/sl";
                     <div class="relative overflow-hidden w-full md:w-[350px] lg:w-[310px] xl:w-[380px] h-[500px] bg-cover bg-no-repeat bg-center rounded-xl" style={{ backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.6)), url(${item.image})`}}>
                         <div class="cursor-pointer flex-col px-8 mt-[120px] transition ease-in-out delay-150 duration-300 hover:-translate-y-24">
                             <div class={`w-[max-content] backdrop-opacity-10 backdrop-invert bg-white/30 p-5 rounded-full`}>
-                                <SlBadge size={'30px'} color="#fff" />
+                                <item.icon size={'30px'} color="#f5e8e1" />
                             </div>
                             <h6 class="text-white font-bold text-[18px] pt-5">{item.name}</h6>
                             <article class="text-white font-semibold pt-3">
