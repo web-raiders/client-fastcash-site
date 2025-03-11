@@ -11,7 +11,6 @@ import CarouselSlideOne from './coins-on-leather.jpg?url'
 import CarouselSlideTwo from './card-on-hand.jpg?url'
 import CarouselSlideThree from './mother-and-child.jpg?url'
 import CarouselSlideFour from './card-in-jacket.jpg?url'
-import CarouselSlideFive from './nigeria-skyline.jpg?url'
 
 export {
     Logo,
@@ -25,5 +24,4 @@ export {
     CarouselSlideTwo,
     CarouselSlideThree,
     CarouselSlideFour,
-    CarouselSlideFive
 }
