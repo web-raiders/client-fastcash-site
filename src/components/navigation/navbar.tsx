@@ -66,7 +66,7 @@ const Navbar = () => {
             <div className="_container">
                 <div className="_flex_box">
                     <div className='_logo'>
-                        <a href='/'><img src={Logo} alt='logo' width={"120"} height={"120"} /></a>
+                        <a href='/'><img src={Logo} alt='logo' width={"140"} height={"140"} /></a>
                     </div>
                     <div className="_nav_menu">
                         <ul className="_nav_list">
