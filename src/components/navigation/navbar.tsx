@@ -51,10 +51,10 @@ const Navbar = () => {
             name: 'Products',
             path: '/products',
         },
-        {
-            name: 'Apply Now',
-            path: 'https://docs.google.com/forms/d/e/1FAIpQLSe2nvsxuPIdObeks1S6Fa1Tr5IJWZ4n4hqrSWM6GYyDH13Gdg/viewform?usp=preview',
-        },
+        // {
+        //     name: 'Apply Now',
+        //     path: 'https://docs.google.com/forms/d/e/1FAIpQLSe2nvsxuPIdObeks1S6Fa1Tr5IJWZ4n4hqrSWM6GYyDH13Gdg/viewform?usp=preview',
+        // },
         {
             name: 'Contact Us',
             path: '/contact'

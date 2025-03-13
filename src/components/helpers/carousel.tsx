@@ -28,7 +28,7 @@ const carousel = () => {
                     <h1 className=" text-4xl pt-5 font-bold md:text-6xl" data-aos='fade-down' data-aos-offset='100'>Financial solutions</h1>
                     <h1 className=" text-4xl pt-5 font-bold md:text-6xl" data-aos='fade-down' data-aos-offset='100'>for a brighter future</h1>
                     <div className="flex flex-col gap-y-5 justify-center items-center space-x-4 mt-10 md:flex md:flex-row md:gap-y-0" data-aos='fade-up' data-aos-offset='100'>
-                        <Button path="https://docs.google.com/forms/d/e/1FAIpQLSe2nvsxuPIdObeks1S6Fa1Tr5IJWZ4n4hqrSWM6GYyDH13Gdg/viewform?usp=preview" className="py-3 px-24 font-bold text-white bg-[#F56B1E] rounded-full baseline hover:text-[#F56B1E] hover:bg-[#F5E9E1]" text="Apply Now" />
+                        {/* <Button path="https://docs.google.com/forms/d/e/1FAIpQLSe2nvsxuPIdObeks1S6Fa1Tr5IJWZ4n4hqrSWM6GYyDH13Gdg/viewform?usp=preview" className="py-3 px-24 font-bold text-white bg-[#F56B1E] rounded-full baseline hover:text-[#F56B1E] hover:bg-[#F5E9E1]" text="Apply Now" /> */}
                     </div>
                 </div>
             </section>
