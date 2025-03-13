@@ -63,11 +63,11 @@ export const coreValues = [
         title: 'Ethics',
         description: 'Guided by moral principles, we act with honesty, fairness, and transparency, ensuring our actions align with our values.'
     },
-    {
-        icon: MdOutlineEnergySavingsLeaf,
-        title: 'Integrity',
-        description: 'Authentic and true to our word, we operate with consistency, reliability, and accountability, building strong relationships.'
-    },
+    // {
+    //     icon: MdOutlineEnergySavingsLeaf,
+    //     title: 'Integrity',
+    //     description: 'Authentic and true to our word, we operate with consistency, reliability, and accountability, building strong relationships.'
+    // },
     {
         icon: MdOutlineEnergySavingsLeaf,
         title: 'Trust',
@@ -78,11 +78,11 @@ export const coreValues = [
         title: 'Professionalism',
         description: 'We maintain a high level of expertise and dedication in all we do.'
     },
-    {
-        icon: MdOutlineEnergySavingsLeaf,
-        title: 'Customer-Centricity',
-        description: 'Your needs come first, and we tailor our services to serve you better.'
-    },
+    // {
+    //     icon: MdOutlineEnergySavingsLeaf,
+    //     title: 'Customer-Centricity',
+    //     description: 'Your needs come first, and we tailor our services to serve you better.'
+    // },
 ]
 
 export const solutions = [
