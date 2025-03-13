@@ -93,12 +93,16 @@ const Navbar = () => {
                         >
                             {navlist.map((item: any) => (
                                     <div key={item?.name} className='inline-flex' onClick={() => handleToggle('subMenu', item?.name)}>
-                                        <motion.li 
+                                        <motion.a
                                         className={'_nav_list_item_mobile'}
-                                        >
-                                        <motion.a href={item.path}>{item.name}</motion.a>
-                                        </motion.li>
+                                        href={item.path}>
+                                            <motion.li 
+                                            >
+                                            {item.name}
+                                            </motion.li>
+                                        </motion.a>
                                     </div>
+                                    
                                 ))}
                             </motion.ul>
                         }
