@@ -48,7 +48,7 @@ export const footer_support = [
     },
     {
         link: 'Email Us',
-        path: 'mailto:loans@fastcashng.com'
+        path: 'mailto:info@fastcashng.com'
     }
 ]
 
@@ -125,7 +125,7 @@ export const contactList = [
     {
         icon: MdOutlineEmail,
         title: 'Email',
-        headingOne: 'loans@fastcashng.com'
+        headingOne: 'info@fastcashng.com'
     },
     {
         icon: FiPhone,
