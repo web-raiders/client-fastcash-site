@@ -113,7 +113,7 @@ export const contactList = [
     {
         icon: SlLocationPin,
         title: 'Head Office',
-        headingOne: 'Ikeja Town Square Mall, 131 Obafemi Awolowo Way Ikeja',
+        headingOne: 'Ikeja Town Square, 131 Obafemi Awolowo Way Ikeja',
         headingTwo: 'Lagos Nigeria',
     },
     {
