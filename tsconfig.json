@@ -22,5 +22,6 @@
     },
     "jsx": "react-jsx",
     "jsxImportSource": "react"
-  }
+  },
+  "exclude": ["sanity.config.ts", "schemaTypes"]
 }
