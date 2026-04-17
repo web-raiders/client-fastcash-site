@@ -113,8 +113,8 @@ export const contactList = [
     {
         icon: SlLocationPin,
         title: 'Head Office',
-        headingOne: 'Ikeja Town Square, 131 Obafemi Awolowo Way Ikeja',
-        headingTwo: 'Lagos Nigeria',
+        headingOne: '15 Joseph Street Off Opebi Link Road, Opebi Ikeja',
+        headingTwo: 'Lagos, Nigeria',
     },
     {
         icon: SlLocationPin,
