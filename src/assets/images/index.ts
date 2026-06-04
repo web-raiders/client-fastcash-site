@@ -4,7 +4,7 @@ import Logo from "./logo.png?url"
 import ProductView from "./man-with-atm.jpg?url"
 import ProductOne from './father-child.jpg?url'
 import ProductTwo from './school.jpg?url'
-import ProductThree from './trader.jpg?url'
+import ProductThree from './market.png?url'
 import ProductFour from './hand-with-key.jpg?url'
 import ProductFive from './man-with-phone.jpg?url'
 import Car4Cash from './car-keys.png?url'
