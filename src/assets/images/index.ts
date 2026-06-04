@@ -7,6 +7,7 @@ import ProductTwo from './school.jpg?url'
 import ProductThree from './trader.jpg?url'
 import ProductFour from './hand-with-key.jpg?url'
 import ProductFive from './man-with-phone.jpg?url'
+import Car4Cash from './car-keys.png?url'
 import CarouselSlideOne from './coins-on-leather.jpg?url'
 import CarouselSlideTwo from './card-on-hand.jpg?url'
 import CarouselSlideThree from './mother-and-child.jpg?url'
@@ -20,6 +21,7 @@ export {
     ProductThree,
     ProductFour,
     ProductFive,
+    Car4Cash,
     CarouselSlideOne,
     CarouselSlideTwo,
     CarouselSlideThree,

@@ -1,12 +1,14 @@
-import { 
+import {
     ProductOne,
     ProductTwo,
     ProductThree,
     ProductFour,
-    ProductFive
+    ProductFive,
+    Car4Cash
 } from "@assets/images"
 import { IoSettingsOutline } from "react-icons/io5";
 import { IoDiamondOutline } from "react-icons/io5";
+import { IoCarSportOutline } from "react-icons/io5";
 // import { PiCarBatteryLight } from "react-icons/pi";
 import { GiBamboo, GiDualityMask, GiMoneyStack } from "react-icons/gi";
 import { MdOutlineEnergySavingsLeaf } from "react-icons/md";
@@ -171,7 +173,42 @@ export const productsLanding = [
     },
 ]
 
+export const car4cash = {
+    trustPoints: [
+        'Fast Approval',
+        'Transparent Process',
+        'Secure Documentation',
+        'Vehicle-Based Funding',
+        'Dedicated Support Team',
+    ],
+    steps: [
+        {
+            title: 'Vehicle Inspection',
+            description: 'Bring your vehicle in for inspection and valuation.',
+        },
+        {
+            title: 'Documentation',
+            description: 'Complete the required verification and documentation.',
+        },
+        {
+            title: 'Approval & Disbursement',
+            description: 'Once requirements are met, funds are disbursed quickly.',
+        },
+        {
+            title: 'Repayment',
+            description: 'Repay on agreed terms and keep ownership of your vehicle.',
+        },
+    ],
+}
+
 export const products = [
+    {
+        image: Car4Cash,
+        name: 'Car4Cash',
+        description: 'Access up to ₦50M using your vehicle—without selling it. Fast approval, a simple process, and transparent documentation, while you keep driving your car.',
+        icon: IoCarSportOutline,
+        applyUrl: 'https://forms.gle/maHDrxJhFax6p7Fy8',
+    },
     {
         image: ProductOne,
         name: 'Personal loan',
