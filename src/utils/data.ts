@@ -204,7 +204,7 @@ export const car4cash = {
 export const products = [
     {
         image: Car4Cash,
-        name: 'Car4Cash',
+        name: 'car4cash',
         description: 'Access up to ₦50M using your vehicle—without selling it. Fast approval, a simple process, and transparent documentation, while you keep driving your car.',
         icon: IoCarSportOutline,
         applyUrl: 'https://forms.gle/maHDrxJhFax6p7Fy8',
