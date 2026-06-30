@@ -50,7 +50,7 @@ export const footer_support = [
     },
     {
         link: 'Email Us',
-        path: 'mailto:info@fastcashng.com'
+        path: 'mailto:customercare@fastcashng.com'
     }
 ]
 
@@ -127,7 +127,7 @@ export const contactList = [
     {
         icon: MdOutlineEmail,
         title: 'Email',
-        headingOne: 'info@fastcashng.com'
+        headingOne: 'customercare@fastcashng.com'
     },
     {
         icon: FiPhone,
@@ -196,7 +196,7 @@ export const car4cash = {
         },
         {
             title: 'Repayment',
-            description: 'Repay on agreed terms and keep ownership of your vehicle.',
+            description: 'Repay according to the agreed terms.',
         },
     ],
 }
@@ -205,7 +205,7 @@ export const products = [
     {
         image: Car4Cash,
         name: 'Car4cash',
-        description: 'Access up to ₦50M using your vehicle—without selling it. Fast approval, a simple process, and transparent documentation, while you keep driving your car.',
+        description: 'Access up to ₦50M using your vehicle. Fast approval, a simple process, and transparent documentation.',
         icon: IoCarSportOutline,
         applyUrl: 'https://forms.gle/maHDrxJhFax6p7Fy8',
     },
