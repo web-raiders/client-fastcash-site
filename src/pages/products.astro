@@ -8,6 +8,7 @@ import { IoCheckmarkCircle } from "react-icons/io5";
 
 const APPLY_URL = 'https://docs.google.com/forms/d/e/1FAIpQLSe2nvsxuPIdObeks1S6Fa1Tr5IJWZ4n4hqrSWM6GYyDH13Gdg/viewform?usp=preview';
 const CAR4CASH_FORM_URL = 'https://forms.gle/maHDrxJhFax6p7Fy8';
+const AGENT_NETWORK_FORM_URL = 'https://forms.gle/HZMz8uvB5UhyWLiE9';
 ---
 
 <Layout title='Products' description={PRODUCTS_PAGE_DESCRIPTION}>
@@ -23,7 +24,7 @@ const CAR4CASH_FORM_URL = 'https://forms.gle/maHDrxJhFax6p7Fy8';
                     <span class="inline-block bg-[#F5E9E1] text-red-900 text-[12px] md:text-[13px] font-bold tracking-wide px-4 py-2 rounded-full">Flagship Product &middot; car4cash</span>
                     <h2 class="text-[28px] leading-[32px] md:text-[42px] md:leading-[46px] text-red-900 font-bold mt-6">Need quick cash from your vehicle?</h2>
                     <p class="text-[15px] md:text-base text-gray-600 mt-5 text-justify">
-                        Access up to <span class="font-bold text-red-900">&#8358;50 Million</span> using your vehicle through FastCash car4cash. Fast approval, a simple process, and transparent documentation.
+                        Access up to <span class="font-bold text-red-900">&#8358;50 Million</span> using your vehicle through fastcash car4cash. Fast approval, a simple process, and transparent documentation.
                     </p>
                     <!-- Trust chips -->
                     <div class="flex flex-wrap gap-3 mt-7">
@@ -62,6 +63,63 @@ const CAR4CASH_FORM_URL = 'https://forms.gle/maHDrxJhFax6p7Fy8';
                 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-10 md:mt-14" data-aos='fade-up' data-aos-offset='100'>
                     {
                         Data.car4cash.steps.map((step: any, i: number) => (
+                            <div class="bg-white rounded-2xl shadow-lg hover:shadow-2xl p-7 h-full">
+                                <div class="w-[48px] h-[48px] rounded-full bg-[#F5E9E1] text-red-900 font-bold flex justify-center items-center text-[18px]">{i + 1}</div>
+                                <h4 class="text-[18px] font-bold text-red-900 mt-5">{step.title}</h4>
+                                <p class="text-[14px] text-gray-600 mt-2 text-justify">{step.description}</p>
+                            </div>
+                        ))
+                    }
+                </div>
+            </div>
+        </Common.Container>
+    </section>
+
+    <!-- Agent Network -->
+    <section class="w-full bg-red-900 py-16 md:py-24">
+        <Common.Container flex="flex-col">
+            <div class="w-full flex flex-col gap-y-10 lg:gap-y-0 lg:flex-row lg:gap-x-16">
+                <!-- Left Content -->
+                <div class="w-full lg:w-2/5" data-aos='fade-right' data-aos-offset='100'>
+                    <span class="inline-block bg-[#F5E9E1] text-red-900 text-[12px] md:text-[13px] font-bold tracking-wide px-4 py-2 rounded-full">Agent Network</span>
+                    <h2 class="text-[28px] leading-[32px] md:text-[42px] md:leading-[46px] text-white font-bold mt-6">Earn by referring car4cash</h2>
+                    <p class="text-[15px] md:text-base text-[#F5E9E1] mt-5 text-justify">
+                        Join the car4cash agent network and earn a percentage on every referral. Introduce vehicle owners
+                        who need quick cash, and get paid when their loan is approved and disbursed.
+                    </p>
+                    <div class="mt-9">
+                        <Common.Button path={AGENT_NETWORK_FORM_URL} text="Apply to become an agent" className="inline-block text-center py-3 px-8 font-bold text-white bg-[#F56B1E] rounded-full baseline hover:text-[#F56B1E] hover:bg-[#F5E9E1]" />
+                    </div>
+                </div>
+                <!-- Right Content -->
+                <div class="w-full lg:w-3/5" data-aos='fade-up' data-aos-offset='100'>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                        {
+                            Data.agentNetwork.benefits.map((benefit: any) => (
+                                <div class="bg-white/10 rounded-2xl p-6 h-full">
+                                    <div class="flex items-start gap-3">
+                                        <IoCheckmarkCircle color="#F56B1E" size={'22px'} />
+                                        <div>
+                                            <h4 class="text-[16px] md:text-[17px] font-bold text-white">{benefit.title}</h4>
+                                            <p class="text-[13px] md:text-[14px] text-[#F5E9E1] mt-2 text-justify">{benefit.description}</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            ))
+                        }
+                    </div>
+                </div>
+            </div>
+
+            <!-- How to join -->
+            <div class="mt-20 md:mt-24">
+                <div class="text-center" data-aos='fade-up' data-aos-offset='100'>
+                    <h6 class="text-[13px] md:text-base uppercase text-[#F56B1E] font-bold">Getting started</h6>
+                    <h3 class="text-[24px] md:text-[34px] text-white font-bold mt-2">How to join the network</h3>
+                </div>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-10 md:mt-14" data-aos='fade-up' data-aos-offset='100'>
+                    {
+                        Data.agentNetwork.steps.map((step: any, i: number) => (
                             <div class="bg-white rounded-2xl shadow-lg hover:shadow-2xl p-7 h-full">
                                 <div class="w-[48px] h-[48px] rounded-full bg-[#F5E9E1] text-red-900 font-bold flex justify-center items-center text-[18px]">{i + 1}</div>
                                 <h4 class="text-[18px] font-bold text-red-900 mt-5">{step.title}</h4>

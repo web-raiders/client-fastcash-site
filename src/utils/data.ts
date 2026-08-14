@@ -201,6 +201,45 @@ export const car4cash = {
     ],
 }
 
+export const agentNetwork = {
+    benefits: [
+        {
+            title: 'Earn On Every Referral',
+            description: 'Receive a percentage of the value of each car4cash loan that closes through you.',
+        },
+        {
+            title: 'No Capital Required',
+            description: 'Join at no cost. You introduce vehicle owners, we handle inspection, approval, and disbursement.',
+        },
+        {
+            title: 'Work On Your Own Terms',
+            description: 'Refer as many vehicle owners as you like, whenever it suits you.',
+        },
+        {
+            title: 'Dedicated Agent Support',
+            description: 'Our team supports you through every referral, from first enquiry to disbursement.',
+        },
+    ],
+    steps: [
+        {
+            title: 'Apply',
+            description: 'Complete the agent network application form with your details.',
+        },
+        {
+            title: 'Get Onboarded',
+            description: 'Our team reviews your application and takes you through onboarding.',
+        },
+        {
+            title: 'Refer',
+            description: 'Introduce vehicle owners who need quick cash to car4cash.',
+        },
+        {
+            title: 'Get Paid',
+            description: 'Earn your commission on every referral that is approved and disbursed.',
+        },
+    ],
+}
+
 export const products = [
     {
         image: Car4Cash,
@@ -236,7 +275,7 @@ export const products = [
     {
         image: ProductFive,
         name: 'Investment Opportunities',
-        description: 'We offer tailored investment solutions to help clients grow their wealth and achieve financial goals. Turn your savings into passive income with Fastcash.',
+        description: 'We offer tailored investment solutions to help clients grow their wealth and achieve financial goals. Turn your savings into passive income with fastcash.',
         icon: GiMoneyStack,
     },
 ]
